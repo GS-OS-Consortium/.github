@@ -9,13 +9,11 @@ Check out these two branches.
 
 `gsos` is the System 6.0.4 rebuild. It is private and holds Apple's source and disks. `iigs-programmers-workshop` is the public Go toolchain; `linkiigs-1.3` is linkiigs 1.3.
 
-`gsos` carries the toolchain as the `iigs-tools` submodule. On `rel/6.0.4` that submodule URL is still digarok, and `linkiigs-1.3` lives on this organization's copy, so retarget the submodule and check that branch out after cloning.
+`gsos` carries the toolchain as the `iigs-tools` submodule, cloned from this organization's repository. The commit recorded on `rel/6.0.4` is older than `linkiigs-1.3`, so check that branch out after cloning.
 
 ```sh
 git clone -b rel/6.0.4 --recurse-submodules git@github.com:GS-OS-Consortium/gsos.git
 cd gsos
-git -C iigs-tools remote set-url origin git@github.com:GS-OS-Consortium/iigs-programmers-workshop.git
-git -C iigs-tools fetch origin
 git -C iigs-tools checkout linkiigs-1.3
 ```
 
